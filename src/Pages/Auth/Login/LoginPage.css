@@ -1,0 +1,227 @@
+/* ===== VARIABLES ===== */
+:root {
+  --left-color1: #0a6efd;
+  --left-color2: #033b88;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --input-bg: rgba(255, 255, 255, 0.95);
+  --accent: #4bb2ff;
+  --text-dark: #033b88;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+.login-background {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--left-color1), var(--left-color2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ===== CONTAINER ===== */
+.full-back {
+  width: 100%;
+  max-width: 1200px;
+  color: black;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 200px;
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+/* ===== LEFT TEXT ===== */
+.textvet {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.textvet h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.textvet p {
+  font-size: 22px;
+  opacity: 0.8;
+  color: white;
+}
+
+/* ===== VERTICAL LINE ===== */
+.line {
+  width: 2px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== LOGIN FORM ===== */
+.loginform {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 35px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.loginform:hover {
+  transform: scale(1.03);
+}
+
+.loginform svg {
+  font-size: 50px;
+  color: var(--input-bg);
+  margin-bottom: 15px;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.loginform label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  color: white;
+}
+
+.loginform input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: var(--input-bg);
+  font-size: 15px;
+}
+
+/* ===== BUTTONS ===== */
+.loginform button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.forgot-pass {
+  background: transparent;
+  color: var(--input-bg);
+  text-align: right;
+  margin-top: 10px;
+}
+
+.forgot-pass:hover {
+  color: var(--accent);
+}
+
+.login {
+  background: var(--left-color1);
+  color: white;
+}
+
+.login:hover {
+  background: #094ec4;
+}
+
+/* ===== MESSAGE ===== */
+.login-message {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #ffe0e0;
+  text-align: center;
+}
+
+/* ===== CREATE ACCOUNT LINK ===== */
+.signup-link {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.signup-link a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+      MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width: 1024px) {
+  .full-back {
+    gap: 100px;
+    padding: 30px;
+  }
+  .textvet h2 { font-size: 38px; }
+  .textvet p  { font-size: 20px; }
+}
+
+@media (max-width: 850px) {
+  .full-back { gap: 50px; }
+  .textvet h2 { font-size: 32px; }
+  .textvet p  { font-size: 18px; }
+  .loginform  { padding: 25px; }
+}
+
+@media (max-width: 700px) {
+  .full-back {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+  .textvet {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .textvet h2 {
+    font-size: 28px;
+    border-bottom: none;
+  }
+  .textvet p {
+    font-size: 17px;
+    max-width: 90%;
+  }
+  .line { display: none; }
+  .loginform {
+    width: 100%;
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-background { padding: 16px; }
+  .full-back { padding: 10px; gap: 20px; }
+  .textvet h2 { font-size: 24px; }
+  .textvet p  { font-size: 15px; }
+  .loginform  { padding: 20px 15px; }
+  .loginform input,
+  .loginform button { padding: 10px; font-size: 14px; }
+  .loginform svg { font-size: 40px; }
+}

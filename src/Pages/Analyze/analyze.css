@@ -1,0 +1,120 @@
+.analyze-container {
+  width: 90%;
+  max-width: 860px;
+  margin: 36px auto 60px;
+  text-align: center;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.back-btn:hover { color: var(--color-accent); }
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.subtitle {
+  color: #888;
+  margin: 6px 0 28px;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+/* Loading */
+.loading-box {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #555;
+}
+
+.loading-circle {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #e0e0e0;
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Error */
+.error-box {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff3f3;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  color: #721c24;
+  font-size: 15px;
+}
+
+/* Results */
+.result-box {
+  margin-top: 28px;
+  text-align: left;
+}
+
+.result-box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.result-section {
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-top: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.result-section h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-section ul {
+  padding-left: 20px;
+}
+
+.result-section li {
+  margin-bottom: 6px;
+  line-height: 1.65;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .analyze-container { width: 95%; margin: 24px auto 50px; }
+  .title { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .analyze-container { width: 100%; padding: 0 16px; margin: 20px auto 40px; }
+  .title { font-size: 20px; }
+  .result-section { padding: 14px 14px; }
+}

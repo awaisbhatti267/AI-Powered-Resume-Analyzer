@@ -1,0 +1,8 @@
+flask
+flask-cors
+python-dotenv
+bcrypt
+PyMuPDF
+groq
+mysql-connector-python
+gunicorn

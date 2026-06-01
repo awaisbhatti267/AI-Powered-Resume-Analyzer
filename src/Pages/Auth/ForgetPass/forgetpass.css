@@ -1,0 +1,161 @@
+/* ===== VARIABLES ===== */
+:root {
+    --left-color1: #0a6efd;
+    --left-color2: #033b88;
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --input-bg: rgba(255, 255, 255, 0.95);
+    --accent: #4bb2ff;
+    --text-dark: #033b88;
+}
+
+/* ===== GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+.forget-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--left-color1), var(--left-color2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    padding: 20px;
+}
+.for-icon {
+    font-size: 50px;       /* big and centered */
+    color: white;          /* pure white */
+    margin-bottom: 15px;   /* spacing below icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== FORGET FORM ===== */
+.forget-model {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.forget-model h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.forget-model p {
+    color: white;
+    opacity: 0.9;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.forget-model a {
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+} 
+.forget-model a:hover{
+    text-decoration: underline;
+}
+
+.forget-model input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: var(--input-bg);
+    font-size: 15px;
+}
+
+.forget-model button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: var(--left-color1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.forget-model button:hover {
+    background: #094ec4;
+}
+
+/* ===== VERTICAL LINE ===== */
+.sv-Line {
+    width: 2px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== IMAGE ===== */
+.forimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forimage img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+
+}
+
+/* ===== MESSAGE BOX ===== */
+.msg-box {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .forget-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .forget-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sv-Line {
+        display: none;
+    }
+
+    .forget-model {
+        width: 90%;
+    }
+
+    .forimage img {
+      display: none;
+    }
+}

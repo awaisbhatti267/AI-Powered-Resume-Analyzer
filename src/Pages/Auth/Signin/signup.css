@@ -1,0 +1,281 @@
+/* ===== VARIABLES ===== */
+:root {
+  --left-color1: #0a6efd;
+  --left-color2: #033b88;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --input-bg: rgba(255, 255, 255, 0.95);
+  --accent: #4bb2ff;
+  --text-dark: #033b88;
+}
+
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+.login-background2 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--left-color1), var(--left-color2));
+  background-position: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ===== CONTAINER ===== */
+.full-back2 {
+  width: 100%;
+  max-width: 1200px;
+  color: black;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 200px;
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+/* ===== LEFT TEXT ===== */
+.textvet2 {
+  width: 40%;
+  /* line-height: 20px; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.textvet2 h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.textvet2 p {
+  font-size: 22px;
+  opacity: 0.8;
+  color: white;
+}
+
+/* ===== VERTICAL LINE ===== */
+.line2 {
+  width: 2px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== LOGIN FORM ===== */
+
+.loginform2 {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 35px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.loginform2:hover {
+  transform: scale(1.03);
+}
+.loginform2 svg {
+  font-size: 50px;
+  color: var(--input-bg);
+  margin-bottom: 15px;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.loginform2 label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  color: white;
+}
+
+.loginform2 input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: var(--input-bg);
+  font-size: 15px;
+}
+
+/* ===== BUTTONS ===== */
+.loginform2 button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.forgot-pass2 {
+  background: transparent;
+  color: var(--input-bg);
+  text-align: right;
+  margin-top: 10px;
+}
+
+.forgot-pass2:hover {
+  color: var(--accent);
+}
+
+.login2 {
+  background: var(--left-color1);
+  color: white;
+}
+
+.login2:hover {
+  background: #094ec4;
+}
+
+/* ===== CREATE ACCOUNT LINK ===== */
+.signup-link2 {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.signup-link2 a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.signup-link2 a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+      RESPONSIVE DESIGN
+=========================== */
+
+/* Large tablets & small laptops */
+@media (max-width: 1024px) {
+  .full-back2 {
+    gap: 120px;
+    padding: 30px;
+  }
+
+  .textvet2 h2 {
+    font-size: 34px;
+  }
+
+  .textvet2 p {
+    font-size: 20px;
+  }
+
+  .loginform2 {
+    padding: 30px;
+  }
+}
+
+/* Tablets (portrait) */
+@media (max-width: 850px) {
+  .full-back2 {
+    gap: 70px;
+  }
+
+  .textvet2 h2 {
+    font-size: 32px;
+  }
+
+  .textvet2 p {
+    font-size: 18px;
+  }
+
+  .loginform2 {
+    padding: 25px;
+  }
+}
+
+/* -------- MAIN MOBILE BREAKPOINT -------- */
+@media (max-width: 700px) {
+  .full-back2 {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .textvet2 {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .textvet2 h2 {
+    font-size: 30px;
+    border-bottom: none;
+  }
+
+  .textvet2 p {
+    font-size: 17px;
+    max-width: 90%;
+  }
+
+  .line2 {
+    display: none;
+  }
+
+  .loginform2 {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .loginform2 input,
+  .loginform2 button {
+    font-size: 14px;
+  }
+
+  .loginform2 svg {
+    font-size: 40px;
+  }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 480px) {
+  .full-back2 {
+    padding: 15px;
+  }
+
+  .textvet2 h2 {
+    font-size: 26px;
+  }
+
+  .textvet2 p {
+    font-size: 15px;
+  }
+
+  .loginform2 {
+    padding: 20px 15px;
+  }
+
+  .loginform2 input,
+  .loginform2 button {
+    padding: 10px;
+  }
+}
